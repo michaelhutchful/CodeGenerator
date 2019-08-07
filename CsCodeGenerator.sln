@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28527.54
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsCodeGenerator", "CsCodeGenerator\CsCodeGenerator.csproj", "{7F76F9F5-DA11-49B1-85F3-1BBE57C16AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "CsCodeGenerator\CodeGenerator.csproj", "{7F76F9F5-DA11-49B1-85F3-1BBE57C16AB1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsCodeGenerator.Tests", "CsCodeGenerator.Tests\CsCodeGenerator.Tests.csproj", "{5040A29C-9E4D-4A68-BFDF-A413FE09244B}"
 EndProject
@@ -25,8 +25,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{7F76F9F5-DA11-49B1-85F3-1BBE57C16AB1} = {DACE7485-09C9-4B52-A48B-00D63288DB49}
-		{5040A29C-9E4D-4A68-BFDF-A413FE09244B} = {DACE7485-09C9-4B52-A48B-00D63288DB49}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADDF8C1D-52D5-4F8C-A862-EA12303C42AA}
 	EndGlobalSection
 EndGlobal

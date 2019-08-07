@@ -1,8 +1,8 @@
-﻿using CsCodeGenerator.Enums;
+﻿using CodeGenerator.Enums;
 using System;
 using System.Collections.Generic;
 
-namespace CsCodeGenerator
+namespace CodeGenerator
 {
     public class InterfaceModel : BaseElement
     {
@@ -12,9 +12,9 @@ namespace CsCodeGenerator
             base.Name = name;
         }
 
-        public override int IndentSize { get; set; } = (int)IndentType.Single * CsGenerator.DefaultTabSize;
+        public override int IndentSize { get; set; } = (int)IndentType.Single * JavaCodeGenerator.DefaultTabSize;
 
-        public new BuiltInDataType? BuiltInDataType { get; }
+        public new BuiltInDataType BuiltInDataType { get; }
 
         public new string CustomDataType => base.CustomDataType;
 
@@ -29,10 +29,10 @@ namespace CsCodeGenerator
             string result = base.ToString();
             result += Util.NewLine + Indent + "{";
 
-            result += String.Join("", Properties);
+            result += string.Join("", Properties);
             bool hasPropertiesAndMethods = Properties.Count > 0 && Methods.Count > 0;
             result += hasPropertiesAndMethods ? Util.NewLine : "";
-            result += String.Join(Util.NewLine, Methods);
+            result += string.Join(Util.NewLine, Methods);
 
             result += Util.NewLine + Indent + "}";
             result = result.Replace(AccessModifier.Public.ToTextLower() + " ", "");

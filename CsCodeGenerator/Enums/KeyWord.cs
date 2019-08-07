@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsCodeGenerator.Enums
+namespace CodeGenerator.Enums
 {
     public enum KeyWord
     {
@@ -14,6 +14,7 @@ namespace CsCodeGenerator.Enums
         Override,
         Sealed,
         Const,
-        Async
+        Async,
+        Final
     }
 }

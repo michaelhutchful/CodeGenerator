@@ -1,8 +1,8 @@
-﻿using CsCodeGenerator.Enums;
+﻿using CodeGenerator.Enums;
 using System;
 using System.Collections.Generic;
 
-namespace CsCodeGenerator
+namespace CodeGenerator
 {
     public class EnumModel : BaseElement
     {
@@ -12,9 +12,9 @@ namespace CsCodeGenerator
             base.Name = name;
         }
 
-        public override int IndentSize { get; set; } = (int)IndentType.Single * CsGenerator.DefaultTabSize;
+        public override int IndentSize { get; set; } = (int)IndentType.Single * JavaCodeGenerator.DefaultTabSize;
 
-        public new BuiltInDataType? BuiltInDataType { get; }
+        public new BuiltInDataType BuiltInDataType { get; }
 
         public new string CustomDataType => base.CustomDataType;
 
@@ -28,7 +28,7 @@ namespace CsCodeGenerator
             result += Util.NewLine + Indent + "{";
 
             result += EnumValues.Count > 0 ? Util.NewLine : "";
-            result += String.Join("," + Util.NewLine, EnumValues);
+            result += string.Join("," + Util.NewLine, EnumValues);
             result += Util.NewLine + Indent + "}";
             return result;
         }
@@ -42,8 +42,8 @@ namespace CsCodeGenerator
             this.Value = value;
         }
 
-        public virtual int IndentSize { get; set; } = (int)IndentType.Double * CsGenerator.DefaultTabSize;
-        public string Indent => new String(' ', IndentSize);
+        public virtual int IndentSize { get; set; } = (int)IndentType.Double * JavaCodeGenerator.DefaultTabSize;
+        public string Indent => new string(' ', IndentSize);
 
         public string Name { get; set; }
 

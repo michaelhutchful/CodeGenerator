@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsCodeGenerator.Enums
+namespace CodeGenerator.Enums
 {
     public enum CommonDataType
     {

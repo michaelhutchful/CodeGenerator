@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CsCodeGenerator
+namespace CodeGenerator
 {
     public class AttributeModel
     {
@@ -18,7 +18,7 @@ namespace CsCodeGenerator
 
         public override string ToString()
         {
-            string parametersString = Parameters.Count > 0 ? Parameters.ToStringList() : "";
+            string parametersString = Parameters.Count > 0 ? Parameters.ToStringList(string.Empty) : "";
             string result = $"[{Name}{parametersString}]";
             return result;
         }
@@ -28,7 +28,7 @@ namespace CsCodeGenerator
     {
         public static string ToStringList(this List<AttributeModel> attributes, string indent)
         {
-            string result = attributes.Count > 0 ? Util.NewLine + indent + String.Join(Util.NewLine + indent, attributes) : "";
+            string result = attributes.Count > 0 ? Util.NewLine + indent + string.Join(Util.NewLine + indent, attributes) : "";
             return result;
         }
     }

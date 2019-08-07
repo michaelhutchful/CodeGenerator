@@ -1,11 +1,11 @@
-﻿using CsCodeGenerator.Enums;
+﻿using CodeGenerator.Enums;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Xunit;
 
-namespace CsCodeGenerator.Tests
+namespace CodeGenerator.Tests
 {
     // CONSOLE: dotnet new -t xunittest  // create
     //          dotnet test              // run

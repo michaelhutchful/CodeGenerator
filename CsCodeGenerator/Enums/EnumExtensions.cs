@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CsCodeGenerator
+namespace CodeGenerator
 {
     public static class EnumExtensions
     {

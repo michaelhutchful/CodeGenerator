@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace CsCodeGenerator
+namespace CodeGenerator
 {
-    public class CsGenerator
+    public class JavaCodeGenerator
     {
         public static int DefaultTabSize = 4;
 
-        public static string IndentSingle => new String(' ', CsGenerator.DefaultTabSize);
+        public static string IndentSingle => new string(' ', JavaCodeGenerator.DefaultTabSize);
 
         public string OutputDirectory { get; set; } = "Output";
         public string DefaultPath { get; } = Directory.GetCurrentDirectory();
@@ -16,7 +16,7 @@ namespace CsCodeGenerator
         public string Path { get; set; }
 
         public List<FileModel> Files { get; set; } = new List<FileModel>();
-        
+
         public void CreateFiles()
         {
             string path = Path ?? DefaultPath;
